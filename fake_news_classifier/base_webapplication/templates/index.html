@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}  
+ 
+
+{# Main Section #}
+
+	<div class="container-fluid h-100">
+	    <div class="row justify-content-center align-items-center h-100">
+	        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+	            <form action="" method="POST">
+	            	{% csrf_token %}
+	                <div class="form-group">
+	                	{{ form.tweet_url }} 
+	                </div>
+	                <div class="form-group">
+	                    <button class="btn btn-info btn-lg btn-block" type="submit">Find Score</button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	</div>
+
+{% endblock content %}
